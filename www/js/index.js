@@ -56,8 +56,7 @@ var app = {
 					window.localStorage.setItem("username", data.application_user.username);
 					window.localStorage.setItem("userid", userid);
 					
-					//$.mobile.changePage('list.html',{reverse:false, transition: "slide"});
-					alert("success");
+					$.mobile.changePage('list.html',{reverse:false, transition: "slide"});
 				},
 				onError : function(err){
 					alert('아이디/비밀번호를 확인하세요');	
