@@ -26,7 +26,11 @@ var app = {
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);
+        if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/)) {
+	        document.addEventListener("deviceready", this.onDeviceReady, false);
+	    } else {
+	        this.onDeviceReady();
+	    }
     },
     // deviceready Event Handler
     //
@@ -37,15 +41,33 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
-
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-
-        console.log('Received Event: ' + id);
-    }
+        
+    },
+    
+    submitForm: function(){
+		var userid = $("[name='userid']").val();
+		var password = $("[name='password']").val();
+		
+		Built.User.login(
+			userid,
+			password,
+			{
+				onSuccess : function(data, res){
+					window.localStorage.setItem("username", data.application_user.username);
+					window.localStorage.setItem("userid", userid);
+					
+					//$.mobile.changePage('list.html',{reverse:false, transition: "slide"});
+					alert("success");
+				},
+				onError : function(err){
+					alert('아이디/비밀번호를 확인하세요');	
+				}
+			}
+		);
+		
+		return false;
+	}
 };
 
 app.initialize();
+
