@@ -10,25 +10,18 @@
         <title>Hello World</title>
     </head>
     <body>
-        <div data-role="page" id="page1">
+        <div data-role="page" id="list">
         	<div data-role="header">
         		<h1>상계주차</h1>
         	</div>
-        	<div data-role="content">
+        	<div data-role="content" class_="infinite-scroll">
+        		<div class="infinite-scroll">
+        		<ul data-role="listview" data-inset="true" id="car-data" data-filter="true" >
+            	</ul>
+            	</div>
         	</div>
+        	
         </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
-        <script type="text/javascript" src="js/builtio-min.js"></script>
-	    <script>
-	      	Built.initialize('blt1267548d4044d1d1', 'sanggye');
-	  	</script>
-        <script type="text/javascript" src="js/list.js"></script>
-        <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
-        <script>
-        	//app.getList();
-        	alert("kk");
-        </script>
     </body>
 </html>
 
