@@ -34,7 +34,11 @@ var app = {
 	        // this.onDeviceReady();
 	    // }
 	    
-	    this.onDeviceReady();
+	    //this.onDeviceReady();
+	    document.addEventListener("deviceready", function(){
+		      alert("123");
+		      this.onDeviceReady();
+		 },true);
 	    
     },
     // deviceready Event Handler
