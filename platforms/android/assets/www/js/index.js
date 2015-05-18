@@ -34,7 +34,8 @@ var app = {
 	        // this.onDeviceReady();
 	    // }
 	    
-	    document.addEventListener("deviceready", this.onDeviceReady, false);
+	    //document.addEventListener("deviceready", this.onDeviceReady, false);
+	    this.onDeviceReady();
 	    
     },
     // deviceready Event Handler
