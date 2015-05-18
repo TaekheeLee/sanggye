@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>상계교회 주차</title>
+    </head>
+    <body>
+        <div data-role="page" id="page1">
+        	<div data-role="header" style="overflow: hidden;">
+        		<h1>차량조회</h1>
+        	</div>
+        	<div data-role="content">
+        		<h2 id="car_id"></h2>
+        		<fieldset data-role="controlgroup" data-type="horizontal">
+        			<input type="checkbox" name="checkbox-h-car" id="checkbox-h-car">
+        			<label for="checkbox-h-car">자동차</label>
+        			<input type="checkbox" name="checkbox-h-key" id="checkbox-h-key">
+        			<label for="checkbox-h-key">키</label>
+        		</fieldset>
+        		<form>
+        			<ul data-role="listview">
+        				<li id="owner_job"></li>
+        				<li id="telno"></li>
+        				<li id="worship"></li>
+        			</ul>
+        		</form>
+        	</div>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="js/builtio-min.js"></script>
+	    <script>
+	      	Built.initialize('blt1267548d4044d1d1', 'sanggye');
+	  	</script>
+        <script type="text/javascript" src="js/show.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+    </body>
+</html>
+
